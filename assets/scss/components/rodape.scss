@@ -1,0 +1,151 @@
+@use "../utilitarios" as *;
+
+.rodape{
+
+    &__imgs{
+        display: flex;
+        width: 100%;
+        @include celular{
+            flex-wrap: wrap;
+        }
+        
+
+
+
+    }
+    &__img{
+        &:first-child{
+            background: url(../images/desktop/image-gallery-milkbottles.jpg) no-repeat center / cover;
+            width: 25%;
+            height: 300px;
+
+            @include celular{
+                background: url(../images/mobile/image-gallery-milkbottles.jpg) no-repeat center / cover;
+                width: 50%;
+                height: 200px;
+            }
+
+        }
+        &:nth-child(2){
+            background: url(../images/desktop/image-gallery-orange.jpg) no-repeat center / cover;
+            width: 25%;
+            height: 300px;
+            
+            @include celular{
+                background: url(../images/mobile/image-gallery-orange.jpg) no-repeat center / cover;
+                width: 50%;
+                height: 200px;
+            }
+
+        }
+        &:nth-child(3){
+            background: url(../images/desktop/image-gallery-cone.jpg) no-repeat center / cover;
+            width: 25%;
+            height: 300px;
+
+            @include celular{
+                background: url(../images/mobile/image-gallery-cone.jpg) no-repeat center / cover;
+                width: 50%;
+                height: 200px;
+            }
+
+        }
+        &:last-child{
+            background: url(../images/desktop/image-gallery-sugarcubes.jpg) no-repeat center / cover;
+            width: 25%;
+            height: 300px;
+            @include celular{
+                background: url(../images/mobile/image-gallery-sugar-cubes.jpg) no-repeat center / cover;
+                width: 50%;
+                height: 200px;
+            }
+
+        }
+
+
+    }
+    &__fundo{
+        background-color: $esmeralda-claro;
+        @include flex-cc;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__logo{
+
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
+
+    }
+    &__menu{
+
+
+    }
+    &__menu-itens{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 2.5rem;
+
+    }
+    &__menu-item{
+        margin: 1.6rem;
+
+    }
+    &__menu-link{
+
+        text-decoration: none;
+        color: $azul-dark;
+        @include Barlow;
+        transition: all 300ms ease-in-out;
+        &:hover{
+
+            color: $branco;
+
+        }
+
+    }
+    &__icones{
+
+        margin-bottom: 2.5rem;
+        display: flex;
+
+    }
+    &__icone{
+
+        margin: 0.5rem;
+        height: 20px;
+        width: 20px;
+        transition: all 300ms ease-in-out;
+        &:first-child{
+
+            background: url(../images/icon-facebook.svg) no-repeat center / cover;
+            &:hover{
+                background: url(../images/icon-facebook-white.svg) no-repeat center / cover;
+            }
+
+        }
+        &:nth-child(2){
+            background: url(../images/icon-instagram.svg) no-repeat center / cover;
+            &:hover{
+                background: url(../images/icon-instagram-white.svg) no-repeat center / cover;
+            }
+        }
+        &:nth-child(3){
+            background: url(../images/icon-twitter.svg) no-repeat center / cover;
+            &:hover{
+                background: url(../images/icon-twitter-white.svg) no-repeat center / cover;
+            }
+        }
+        &:last-child{
+            background: url(../images/icon-pinterest.svg) no-repeat center / cover;
+            &:hover{
+                background: url(../images/icon-pinterest-white.svg) no-repeat center / cover;
+            }
+        }
+        &:hover{
+            cursor: pointer;
+
+        }
+
+
+    }
+}

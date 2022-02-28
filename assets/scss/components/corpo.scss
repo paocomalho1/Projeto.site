@@ -1,0 +1,250 @@
+@use "../utilitarios" as *;
+
+.conteudo{
+    display: flex;
+    flex-wrap: wrap;
+
+    
+
+    &__conteiner-5{
+        width: 100%;
+        display: flex;
+        @include celular{
+            flex-direction: column-reverse;
+        }
+    }
+    &__conteiner{
+
+        width: 50%;
+        height: 500px;
+        @include flex-cc;
+        flex-direction: column;
+        align-items: flex-start;
+        @include celular{
+            width: 100%;
+            align-items: center;
+        }
+
+
+       
+
+        
+
+    }
+
+    &__conteiner-2{
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        @include celular{
+            flex-direction: column-reverse;
+        }
+
+    }
+    &__titulo{
+        color: $esmeralda;
+        font-size: 2.3rem;
+        margin-right: 6rem;
+        @include Fraunces-dark;
+        text-align: start;
+        margin-left: 6.0rem;
+        margin-bottom: 2rem;
+        color:  $azul-dark;
+        @include celular{
+            text-align: center;
+            margin-left: 1rem;
+            margin-bottom: 2rem;
+            margin-right: 1rem;
+        }
+
+    }
+    &__texto{
+        margin-left: 6.0rem;
+        margin-right: 6rem;
+        line-height: 1.7rem;
+        font-size: 0.85rem;
+        @include Barlow;
+        color: $azul-cinza-claro;
+        @include celular{
+            text-align: center;
+            margin-left: 1.0rem;
+            margin-right: 1.0rem;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+    }
+    &__link{
+        padding: 0;
+        text-align: start;
+        text-decoration: none;
+        color: $azul-dark;
+        font-size: 1.0rem;
+        @include Fraunces-dark;
+        margin-left: 6.0rem;
+        margin-top: 2rem;
+        text-transform: uppercase;
+        @include celular{
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+       
+
+
+
+        
+    }
+    &__img{
+        width: 50%;
+        height: 500px;
+        @include celular{
+            width: 100%;
+        }
+        
+    }
+}
+.link1{
+    &::after{
+
+        content: "";
+        display: block;
+        border-radius: 20px;
+        width: 8rem;
+        position: relative;
+        right: 5px;
+        bottom: 5px;
+        z-index: -1;
+        height: 9px;
+        background-color: hsla(51, 100%, 49%,0.25);
+        transition: all 300ms ease-in-out;
+        @include celular{
+            right: 0px;
+        }
+        }
+        &:hover{
+            &::after{
+                background-color: $amarelo;
+
+    
+    }
+            
+            
+            
+        
+    }
+}
+.link2{
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 20px;
+        position: relative;
+        bottom: 5px;
+        right: 5px;
+        width: 8rem;
+        z-index: -1;
+        height: 9px;
+        background-color: hsla(7, 99%, 70%, 0.25);
+        transition: all 300ms ease-in-out;
+        @include celular{
+            right: 0px;
+        }
+        
+        
+    }
+    &:hover{
+        &::after{
+            background-color: $vermelho-claro;
+        }
+    }
+
+}
+.img1{
+    background: url(../images/desktop/image-transform.jpg) no-repeat center / cover;
+    @include celular{
+        background: url(../images/mobile/image-transform.jpg) no-repeat center / cover;
+    }
+}
+.img2{
+    background: url(../images/desktop/image-stand-out.jpg) no-repeat center / cover;
+    @include celular{
+        background: url(../images/mobile/image-stand-out.jpg) no-repeat center / cover;
+    }
+    
+}
+.img3{
+    background: url(../images/desktop/image-graphic-design.jpg) no-repeat center / cover ;
+    @include celular{
+        background: url(../images/mobile/image-graphic-design.jpg) no-repeat center / cover;
+    }
+}
+.img4{
+    background: url(../images/mobile/image-photography.jpg) no-repeat center / cover ;
+    @include celular{
+        background: url(../images/mobile/image-photography.jpg) no-repeat center / cover;
+    }
+}
+
+.conteudo{
+    
+
+    &__conteiner-3{
+
+        display: flex;
+        width: 100%;
+        @include celular{
+            width: 100%;
+            flex-direction: column;
+        }
+
+
+    }
+
+    &__conteiner-4{
+
+        height: 500px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @include celular{
+            width: 100%;
+        }
+    }
+
+    &__titulo-2{
+
+        font-size: 1.8rem;
+        text-align: center;
+        @include Fraunces-dark;
+        color: $esmeralda;
+        margin-bottom: 2rem;
+        margin-right: 5rem;
+        margin-left: 5rem;
+        @include celular{
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+
+        
+
+    }
+    &__texto-2{
+
+        text-align: center;
+        font-size: 1rem;
+        @include Barlow;
+        color: $esmeralda;
+        margin-bottom: 4rem;
+        margin-right: 8rem;
+        margin-left: 8rem;
+        line-height: 1.7rem;
+        @include celular{
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        
+
+    }
+}

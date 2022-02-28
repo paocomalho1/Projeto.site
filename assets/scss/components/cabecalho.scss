@@ -1,0 +1,201 @@
+@use "../utilitarios" as *;
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.conteiner__triangulo{
+    display: none;
+    position: fixed;
+    width: calc(88% - 4rem);
+    justify-content: flex-end;
+    border-right: pxToRem(32) solid $branco;
+    border-left: pxToRem(32) solid transparent;
+    border-top: pxToRem(32) solid transparent;
+    z-index: 1;
+    left: 6%;
+    top: -84.6%;
+    @include celular{
+        display: block;
+    } 
+}
+
+
+.cabecalho{
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    background: url(../images/desktop/image-header.jpg) no-repeat center / cover;
+    height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+    @include celular{
+        background: url(../images/mobile/image-header.jpg) no-repeat center / cover;
+
+    }
+
+    &__conteiner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo{
+
+    }
+
+    &__menu{
+
+        .menu{
+
+            &__itens{
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                @include celular{
+                    display: none;
+                }
+
+            }
+
+            &__item{
+                
+                margin-right: pxToRem(16);
+                color: $branco;
+                border-radius: 25px;
+                transition: opacity 300ms ease-in-out;
+                transition: all 300ms ease-in-out;
+                &:last-child{
+                    margin-right: 0;
+                    background-color: $branco;
+                    color: $azul-dark;
+                    text-transform: uppercase;
+                    font-size: .80rem;
+                    @include Fraunces;
+                }
+                &:hover{
+                    background-color:rgba(255, 255, 255, 0.3);
+                    cursor: pointer;
+                    color: $branco;
+                }
+
+
+            }
+
+            &__link{
+                display: block;
+                color: inherit;
+                text-decoration: none;
+                padding: pxToRem(18) pxToRem(24);
+
+            }
+            &__hamburger{
+                display: none;
+                @include celular{
+                    display: flex;
+                    flex-direction: column;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            &__hamburger-bar{
+                height: 2px;
+                margin: 3px;
+                width: 26px;
+                background-color: $branco;
+
+            }
+
+        }
+
+    }
+    &__titulo{
+        font-size: pxToRem(32);
+        @include Fraunces-dark;
+        color: $branco;
+        margin-bottom: 5rem;
+        margin-top: 5rem;
+        letter-spacing: pxToRem(8);
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__ceta{
+        height: 80px;
+        width: 22px;
+
+    }
+
+    .tela{
+
+        position: fixed;
+        background-color: $branco;
+        top: -80%;
+        left: 6%;
+        width: 88%;
+        display: none;
+        @include celular{
+
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        &__menu{
+
+        }
+        &__menu__itens{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+
+        }
+        &__menu__item{
+            margin-bottom: 1rem;
+            color: $azul-cinza;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+
+        }
+        &__menu__link{
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            @include Barlow;
+            border-radius: 25px;
+            padding: pxToRem(18) pxToRem(24);
+            transition: all 300ms ease-in-out;
+            &:hover{
+                background-color:$amarelo;
+                color: $azul-dark;
+                text-transform: uppercase;
+                @include Fraunces;
+                
+            }
+            &:active{
+
+            }
+        }
+
+    }
+
+}
+
+.slide-in{
+    animation: slide-in 300ms ease-in-out forwards;
+}
+.slide-out{
+    animation: slide-out 300ms ease-in-out forwards;
+}
+.slide-in-t{
+    animation: slide-in-t 300ms ease-in-out forwards;
+}
+.slide-out-t{
+    animation: slide-out-t 300ms ease-in-out forwards;
+}

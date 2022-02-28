@@ -1,0 +1,84 @@
+@use "../utilitarios" as *;
+
+.clientes{
+
+    padding: 6rem;
+    @include celular{
+        padding: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__titulo{
+        text-align: center;
+        font-size: 1.0rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: $azul-cinza-claro;
+        @include Fraunces;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__conteiner{
+        display: flex;
+        align-items: center;
+        @include celular{
+            flex-direction: column;
+        }
+    }
+
+    &__conteiner-2{
+
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        width: 33%;
+        @include celular{
+            width: 100%;
+        }
+
+
+    }
+    &__conteiner-img{
+
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    &__img{
+
+        border-radius: 10rem;
+        height: 50px;
+        width: 50px;
+
+    }
+    &__texto{
+        margin-bottom: 4rem;
+        text-align: center;
+        line-height: 1.5rem;
+        font-size: 0.85rem;
+        @include Barlow;
+        color: $azul-cinza;
+        @include celular{
+            font-size: 1.0rem;
+        }
+
+    }
+    &__nome{
+        color: $azul-dark;
+        margin-bottom: 1rem;
+        text-align: center;
+        @include Fraunces-dark;
+        font-size: 1rem;
+
+    }
+    &__proficao{
+        margin-bottom: 1rem;
+        text-align: center;
+        font-size: 0.75rem;
+        color: $azul-cinza-claro;
+
+    }
+}
